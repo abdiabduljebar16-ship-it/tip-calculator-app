@@ -10,36 +10,50 @@
       href="./images/favicon-32x32.png"
     />
     <title>Frontend Mentor | Tip calculator app</title>
-    <style>
-      .attribution {
-        font-size: 0.6875rem;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
-    <h1>
-      SPLIT <br />
-      TTER
-    </h1>
-    <label for="bill">Bill</label>
-    <input type="number" id="bill" required />
-    <p>Select Tip %</p>
-    <button value="5">5%</button><button value="10">10%</button
-    ><button value="15">15%</button><button value="25">25%</button
-    ><button value="50">50%</button>
-    <input type="numer" placeholder="custom" />
-
-    <label for="people">Number of People</label>
-    <input type="number" id="people" />
-
-    <div>
-      <p>Tip Amount / person</p>
-      <p>Total / person</p>
-      <button>Reset</button>
+    <div class="imageContainer">
+      <img src="images/logo.svg" alt="logo it says SPLI TTER" />
     </div>
+    <form action="">
+      <label for="bill">Bill</label>
+      <div>
+        <img src="images/icon-dollar.svg" alt="dolor sign" />
+        <input type="number" id="bill" required />
+      </div>
+      <p>Select Tip %</p>
+      <div class="tipContainer">
+        <button value="5">5%</button>
+        <button value="10">10%</button>
+        <button value="15">15%</button>
+        <button value="25">25%</button>
+        <button value="50">50%</button>
+        <input type="numer" placeholder="custom" />
+      </div>
+
+      <label for="people">Number of People</label>
+      <div>
+        <img src="images/icon-person.svg" alt="" />
+        <input type="number" id="people" />
+      </div>
+
+      <div class="displayContainer">
+        <div class="tipAmaountContainer">
+          <p>
+            Tip Amount <br />
+            <span>/ person</span>
+          </p>
+          <p class="tipAmount"></p>
+        </div>
+        <div class="totalAmountContainer">
+          <p>
+            Total <br />
+            <span>/ person</span>
+          </p>
+          <p class="total"></p>
+        </div>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
   </body>
 </html>
