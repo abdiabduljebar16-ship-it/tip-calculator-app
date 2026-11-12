@@ -35,19 +35,40 @@ input {
     height: 2rem;
 }
 .tipContainer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1rem 0;
 }
 button {
     height: 2rem;
     background-color: var(--color-primary);
     border: 1px solid var(--color-primary);
     border-radius: 0.3rem;
+    color: var(--color-white);
 }
 .displayContainer {
     background-color: var(--color-primary);
-    padding: 1rem;
+    padding: 1rem 1rem 0rem 1rem;
     border-radius: 0.7rem;
+}
+.inputBill , .inputPerson {
+    position: relative;
+    margin: 1rem 0;
+}
+.inputBill img , .inputPerson img {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+.reset {
+    background-color: var(--color-secondary);
+    width: 100%;
+    margin: 1rem 0;
+}
+.totalAmountContainer , .tipAmaountContainer {
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

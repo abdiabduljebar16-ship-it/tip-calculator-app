@@ -18,7 +18,7 @@
     </div>
     <form action="">
       <label for="bill">Bill</label>
-      <div>
+      <div class="inputBill">
         <img src="images/icon-dollar.svg" alt="dolor sign" />
         <input type="number" id="bill" required />
       </div>
@@ -33,7 +33,7 @@
       </div>
 
       <label for="people">Number of People</label>
-      <div>
+      <div class="inputPerson">
         <img src="images/icon-person.svg" alt="" />
         <input type="number" id="people" />
       </div>
@@ -44,16 +44,16 @@
             Tip Amount <br />
             <span>/ person</span>
           </p>
-          <p class="tipAmount"></p>
+          <p class="tipAmount">$0.00</p>
         </div>
         <div class="totalAmountContainer">
           <p>
             Total <br />
             <span>/ person</span>
           </p>
-          <p class="total"></p>
+          <p class="total">$0.00</p>
         </div>
-        <button type="reset">Reset</button>
+        <button type="reset" class="reset">RESET</button>
       </div>
     </form>
   </body>
