@@ -10,7 +10,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
@@ -25,12 +25,12 @@
       </div>
       <p>Select Tip %</p>
       <div class="tipContainer">
-        <button value="5">5%</button>
-        <button value="10">10%</button>
-        <button value="15">15%</button>
-        <button value="25">25%</button>
-        <button value="50">50%</button>
-        <input type="numer" placeholder="custom" />
+        <button value="5" class="tip">5%</button>
+        <button value="10" class="tip">10%</button>
+        <button value="15" class="tip">15%</button>
+        <button value="25" class="tip">25%</button>
+        <button value="50" class="tip">50%</button>
+        <input type="number" placeholder="custom" id="customInput" />
       </div>
 
       <label for="people">Number of People</label>
