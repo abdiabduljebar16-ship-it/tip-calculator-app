@@ -8,7 +8,21 @@ const buttons = document.querySelectorAll(".tip");
 form.addEventListener("input", (event)=> {
     event.preventDefault();
     const billInput = Number(bill.value);
-    const peopleInput = Number(people.value);   
+    const peopleInput = Number(people.value);
+    const customTipInput = Number(customTip.value);  
+    if(customTipInput !== 0){
+        if(peopleInput === 0){
+          const tipAmount = (billInput*customTipInput)/100;
+          const totalAmount = billInput + tipAmount;
+          tipAmountPerPerson.textContent = tipAmount;
+          totalBillPerPerson.textContent = totalAmount;
+        }else{
+          const tipAmount = ((billInput*customTipInput)/100);
+          const totalAmount = (billInput + tipAmount)/peopleInput;
+          tipAmountPerPerson.textContent = tipAmount/peopleInput;
+          totalBillPerPerson.textContent = totalAmount;
+        }
+    } else {
     buttons.forEach(button => {
     button.addEventListener("click" , (event)=> {
         event.preventDefault();
@@ -25,7 +39,7 @@ form.addEventListener("input", (event)=> {
           totalBillPerPerson.textContent = totalAmount;
         }
     });
-  });
-  const customTipInput = Number(customTip.value);  
+  }); 
+}
 });
 
