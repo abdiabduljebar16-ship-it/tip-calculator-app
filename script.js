@@ -7,17 +7,25 @@ const totalBillPerPerson = document.querySelector(".total");
 const buttons = document.querySelectorAll(".tip");
 form.addEventListener("input", (event)=> {
     event.preventDefault();
-    const billInput = Number(bill.value);   
-    console.log(billInput);
+    const billInput = Number(bill.value);
+    const peopleInput = Number(people.value);   
     buttons.forEach(button => {
     button.addEventListener("click" , (event)=> {
         event.preventDefault();
         const value = Number(event.target.value);
+        if(peopleInput === 0){
+          const tipAmount = (billInput*value)/100;
+          const totalAmount = billInput + tipAmount;
+          tipAmountPerPerson.textContent = tipAmount;
+          totalBillPerPerson.textContent = totalAmount;
+        }else{
+          const tipAmount = ((billInput*value)/100);
+          const totalAmount = (billInput + tipAmount)/peopleInput;
+          tipAmountPerPerson.textContent = tipAmount/peopleInput;
+          totalBillPerPerson.textContent = totalAmount;
+        }
     });
   });
-  const customTipInput = Number(customTip.value);
-  console.log(customTipInput);
-  const peopleInput = Number(people.value);
-  console.log(peopleInput);
+  const customTipInput = Number(customTip.value);  
 });
 
