@@ -18,41 +18,44 @@
       <img src="images/logo.svg" alt="logo it says SPLI TTER" />
     </div>
     <form action="">
-      <label for="bill">Bill</label>
-      <div class="inputBill">
-        <img src="images/icon-dollar.svg" alt="dolor sign" />
-        <input type="number" id="bill" required />
-      </div>
-      <p>Select Tip %</p>
-      <div class="tipContainer">
-        <button value="5" class="tip">5%</button>
-        <button value="10" class="tip">10%</button>
-        <button value="15" class="tip">15%</button>
-        <button value="25" class="tip">25%</button>
-        <button value="50" class="tip">50%</button>
-        <input type="number" placeholder="custom" id="customInput" />
-      </div>
-
-      <label for="people">Number of People</label>
-      <div class="inputPerson">
-        <img src="images/icon-person.svg" alt="" />
-        <input type="number" id="people" />
+      <div class="infoContainer">
+        <label for="bill">Bill</label>
+        <div class="inputBill">
+          <img src="images/icon-dollar.svg" alt="dolor sign" />
+          <input type="number" id="bill" required />
+        </div>
+        <p>Select Tip %</p>
+        <div class="tipContainer">
+          <button value="5" class="tip">5%</button>
+          <button value="10" class="tip">10%</button>
+          <button value="15" class="tip">15%</button>
+          <button value="25" class="tip">25%</button>
+          <button value="50" class="tip">50%</button>
+          <input type="number" placeholder="custom" id="customInput" />
+        </div>
+        <label for="people">Number of People</label>
+        <div class="inputPerson">
+          <img src="images/icon-person.svg" alt="" />
+          <input type="number" id="people" />
+        </div>
       </div>
 
       <div class="displayContainer">
-        <div class="tipAmaountContainer">
-          <p>
-            Tip Amount <br />
-            <span>/ person</span>
-          </p>
-          <p class="tipAmount">$0.00</p>
-        </div>
-        <div class="totalAmountContainer">
-          <p>
-            Total <br />
-            <span>/ person</span>
-          </p>
-          <p class="total">$0.00</p>
+        <div class="amountContainer">
+          <div class="tipAmaountContainer">
+            <p>
+              Tip Amount <br />
+              <span>/ person</span>
+            </p>
+            <p class="tipAmount">$0.00</p>
+          </div>
+          <div class="totalAmountContainer">
+            <p>
+              Total <br />
+              <span>/ person</span>
+            </p>
+            <p class="total">$0.00</p>
+          </div>
         </div>
         <button type="reset" class="reset">RESET</button>
       </div>
