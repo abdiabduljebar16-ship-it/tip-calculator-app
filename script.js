@@ -16,18 +16,19 @@ form.addEventListener("input", (event)=> {
         if(peopleInput === 0){
           const tipAmount = (billInput*customTipInput)/100;
           const totalAmount = billInput + tipAmount;
-          tipAmountPerPerson.textContent = tipAmount;
-          totalBillPerPerson.textContent = totalAmount;
+          tipAmountPerPerson.textContent = `$${tipAmount}`;
+          totalBillPerPerson.textContent = `$${totalAmount}`;
         }else{
           const tipAmount = ((billInput*customTipInput)/100);
           const totalAmount = (billInput + tipAmount)/peopleInput;
-          tipAmountPerPerson.textContent = tipAmount/peopleInput;
-          totalBillPerPerson.textContent = totalAmount;
+          tipAmountPerPerson.textContent = `$${tipAmount/peopleInput}`;
+          totalBillPerPerson.textContent = `$${totalAmount}`;
         }
     }
       buttons.forEach(button => {
         button.addEventListener("click" , (event)=> {
             event.preventDefault();
+            button.style.backgroundColor = `hsl(172, 67%, 45% )`;
             const value = Number(event.target.value);
             console.log(value);
             const customTipInput = Number(customTip.value);
@@ -37,13 +38,13 @@ form.addEventListener("input", (event)=> {
                 if(peopleInput === 0){
                    const tipAmount = (billInput*value)/100;
                    const totalAmount = billInput + tipAmount;
-                   tipAmountPerPerson.textContent = tipAmount;
-                   totalBillPerPerson.textContent = totalAmount;
+                   tipAmountPerPerson.textContent = `$${tipAmount}`;
+                   totalBillPerPerson.textContent = `$${totalAmount}`;
                 }else{
                    const tipAmount = ((billInput*value)/100);
                   const totalAmount = (billInput + tipAmount)/peopleInput;
-                  tipAmountPerPerson.textContent = tipAmount/peopleInput;
-                  totalBillPerPerson.textContent = totalAmount;
+                  tipAmountPerPerson.textContent = `$${tipAmount/peopleInput}`;
+                  totalBillPerPerson.textContent = `$${totalAmount}`;
                 }
             }
         });
